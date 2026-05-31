@@ -195,6 +195,18 @@ main {
     color: #10B981;
 }
 
+.features {
+    padding: 100px 20px;
+}
+
+.titre {
+    padding-bottom: 20px;
+}
+
+.titre1 {
+    padding-top: 20px;
+}
+
 @media (max-width: 768px) {
     .features-grid {
     flex-direction: column;
