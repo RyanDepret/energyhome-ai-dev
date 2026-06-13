@@ -2,9 +2,6 @@ const bouton = document.getElementById("analyze-btn")
 const element = document.getElementById("message-btn")
 const calculerBtn = document.getElementById("calculer-btn")
 const resultatDpe = document.getElementById("resultat-dpe")
-const classes = ["A", "B", "C", "D", "E", "F", "G"]
-const listeClasses = document.getElementById("liste-classes")
-
 function calculerClasse(annee) {
     if (annee < 1975) {
         return { lettre: "G", texte: "Classe F ou G" }
@@ -42,17 +39,6 @@ calculerBtn.addEventListener("click", function() {
     else {
     resultatDpe.style.color = "red"
     }
-    listeClasses.style.display = "block"
-    listeClasses.innerHTML = ""
-    for (let i = 0; i < classes.length; i++) {
-    const item = document.createElement("li")
-    if (classe.lettre === classes[i]) {
-    item.style.backgroundColor = "#10B981"
-    item.style.fontWeight = "bold"
-}
-    item.textContent = "Classe " + classes[i]
-    listeClasses.appendChild(item)
-}
     localStorage.setItem("dernierResultat", resultatDpe.textContent)
 })
 const dernierResultat = localStorage.getItem("dernierResultat")
