@@ -40,27 +40,113 @@ body {
 }
 
 #hero {
+    background-image: url('images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    padding: 100px 60% 100px 80px;
+    gap: 24px;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+#simulateur {
+    background: radial-gradient(circle, #D1FAE5, #ffffff);
+    padding: 80px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 100px 20px;
-    gap: 24px;
-    background: linear-gradient(180deg, #ffffff 0%, #D1FAE5 100%);
+}
+
+#dpe-form {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#dpe-form label {
+    font-weight: 600;
+    color: #1A1A1A;
+    font-size: 14px;
+}
+
+#dpe-form input {
+    padding: 14px 20px;
+    border-radius: 50px;
+    border: 1px solid #E5E7EB;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+#dpe-form input:focus {
+    border-color: #10B981;
+}
+
+#calculer-btn {
+    background-color: #10B981;
+    color: #ffffff;
+    padding: 16px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#calculer-btn:hover {
+    background-color: #059669;
 }
 
 #hero h1 {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
 }
 
 #hero p {
     font-size: 18px;
-    color: #6B7280;
-    max-width: 600px;
+    color: #ffffff;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
 }
-
+.h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding: 40px 80px;
+}
 .cta-btn {
     background-color: #10B981;
     color: #ffffff;
@@ -70,11 +156,15 @@ body {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .cta-btn:hover {
     background-color: #D1FAE5;
     color: #10B981;
+    position: relative;
+    z-index: 1;
 }
 
 span {
@@ -207,6 +297,17 @@ main {
     padding-top: 20px;
 }
 
+#message-btn {
+    color: #10B981;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#liste-classes {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .features-grid {
     flex-direction: column;
@@ -223,27 +324,26 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    }
-    #hero h1 {
+}
+#hero h1 {
     font-size: 36px;
-    }
-    .footer-bottom {
+}
+.footer-bottom {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 12px;
-    }
-   
-    main {
+}
+main {
     padding-top: 120px;
-    }
-    .features h2 {
+}
+.features h2 {
     font-size: 28px;
-    }
-    .footer-top h2 {
+}
+.footer-top h2 {
     padding-bottom: 12px;
 }
-    .footer-wave {
+.footer-wave {
     padding-bottom: 20px;
 }
 }
