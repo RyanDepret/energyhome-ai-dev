@@ -85,6 +85,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow: hidden;
 }
 
 #dpe-form label {
@@ -302,10 +303,6 @@ main {
     font-size: 18px;
     font-weight: 600;
     margin-top: 20px;
-}
-
-#liste-classes {
-    display: none;
 }
 
 @media (max-width: 768px) {
