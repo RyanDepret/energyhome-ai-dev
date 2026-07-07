@@ -83,6 +83,7 @@ body {
 .socials a {
     color: #9CA3AF;
     text-decoration: none;
+    font-size: 24px;
 }
 
 .socials a:hover {
